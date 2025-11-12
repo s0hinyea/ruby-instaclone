@@ -1,5 +1,10 @@
 <div class="col-xl-4">
 <%= form_with(model: post) do |form| %>
+
+<div> 
+    <%= form.label :userId, type: "block", value: current_user.id%>
+</div>
+
 <div> 
 <% invalid = post.errors.include?(:title) %>
     <%= form.label :title, style: "display: block" %>
@@ -9,6 +14,7 @@
 <%= post.errors.full_messages_for(:title).join(" ,") %>
     <% end %>
 </div>
+
   <div>
   <% invalid = post.errors.include?(:description) %> 
     <%= form.label :description, style: "display: block" %>
