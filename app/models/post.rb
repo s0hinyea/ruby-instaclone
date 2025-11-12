@@ -7,4 +7,12 @@ class Post < ApplicationRecord
 
   has_many_attached :images
   belongs_to :user
+
+   before_create :generate_random_id
+
+  private
+
+  def generate_random_id
+    self.id = SecureRandom.uuid if id.blank?
+  end
 end
