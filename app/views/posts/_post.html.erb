@@ -9,8 +9,11 @@
     <%= post.description %>
   </div>
 
+  <p>
+  <%= link_to post.user.username, post.user  %>
+  </p>
+
   <div>
-    
     <%= post.keywords %>
   </div>
 
