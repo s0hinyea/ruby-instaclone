@@ -15,6 +15,9 @@
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
         </li>
         <li class="nav-item mx-4">
+          <%= link_to "View My Posts", posts_myposts_path, method: :delete, class:"nav-link" %>
+        </li>
+        <li class="nav-item mx-4">
         <%= link_to "Edit Account", edit_user_registration_path, class:"nav-link" %>
       </li>
       <% else %>
