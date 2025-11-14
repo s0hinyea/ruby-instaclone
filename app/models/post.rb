@@ -7,6 +7,7 @@ class Post < ApplicationRecord
 
 
   has_many_attached :images
+  has_many :likes 
   belongs_to :user
   has_many :comments
 
